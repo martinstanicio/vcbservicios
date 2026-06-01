@@ -1,42 +1,28 @@
 import "./globals.css";
-import { Geist, Geist_Mono, Roboto_Slab } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Roboto_Slab } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import { cn } from "@/lib/utils";
 
-const robotoSlab = Roboto_Slab({
-  subsets: ["latin"],
-  variable: "--font-serif",
-});
+const fontSerif = Roboto_Slab({ subsets: ["latin"], variable: "--font-serif" });
 
-const fontSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+type Props = Readonly<{ children: React.ReactNode }>;
 
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-});
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Props) {
   return (
     <html
-      className={cn(
-        "antialiased",
-        fontSans.variable,
-        fontMono.variable,
-        "font-serif",
-        robotoSlab.variable,
-      )}
-      lang="en"
+      className={cn("antialiased", fontSerif.variable)}
+      lang="es"
       suppressHydrationWarning
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className="bg-background font-serif text-foreground">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          disableTransitionOnChange
+          enableSystem
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
