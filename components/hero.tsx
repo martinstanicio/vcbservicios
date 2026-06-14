@@ -6,6 +6,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { phone } from "@/app/contact";
+import { siteName, title } from "@/app/metadata";
 import heroImage from "@/assets/hero.jpg";
 import { Button } from "@/components/ui/button";
 import { getWhatsAppURL } from "@/lib/whatsapp";
@@ -33,12 +34,11 @@ export function Hero() {
         </Badge>
 
         <h1 className="text-balance font-bold text-5xl text-foreground tracking-tight sm:text-6xl lg:text-7xl">
-          VCB Servicios Generales
+          {siteName}
         </h1>
 
         <p className="mx-auto mt-4 max-w-xl text-pretty text-muted-foreground text-xl leading-relaxed sm:text-2xl">
-          Soluciones para hogares, comercios e industrias. Servicio eficiente,
-          confiable y profesional.
+          {title}
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">

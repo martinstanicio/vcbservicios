@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
 export const siteName = "VCB Servicios Generales";
-export const title = "...";
+export const title =
+  "Soluciones para hogares, comercios e industrias. Servicio eficiente, confiable y profesional.";
 export const description = "...";
 export const keywords = [siteName];
 export const url = process.env.VERCEL_PROJECT_PRODUCTION_URL
@@ -10,7 +11,7 @@ export const url = process.env.VERCEL_PROJECT_PRODUCTION_URL
 
 export const metadata: Metadata = {
   metadataBase: url,
-  title: `${title} | ${siteName}`,
+  title: `${siteName} | ${title}`,
   description,
   generator: "Next.js",
   keywords,
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    title: `${title} | ${siteName}`,
+    title: `${siteName} | ${title}`,
     description,
     siteName,
     locale: "es_AR",
