@@ -15,7 +15,7 @@ export function Brand({ className, ...props }: Props) {
       href="/"
       {...props}
     >
-      <Image alt="" className="size-16" src={logo} />
+      <Image alt="" className="size-16" sizes="auto" src={logo} />
       <p className="font-bold leading-[1.125]">
         VCB <br />
         Servicios <br />
