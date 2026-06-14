@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Roboto_Slab } from "next/font/google";
+import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
 
 export { metadata } from "@/app/metadata";
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: Props) {
     >
       <body className="bg-background font-serif text-foreground">
         {children}
+        <Footer />
       </body>
     </html>
   );
