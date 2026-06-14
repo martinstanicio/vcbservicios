@@ -23,7 +23,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-background/90" />
 
-      <div className="container relative mx-auto px-4 py-24 text-center lg:py-40">
+      <div className="container relative py-24 text-center lg:py-40">
         <Badge
           className="mb-10 bg-foreground/10 px-4 py-4 text-sm backdrop-blur-sm"
           variant="outline"
