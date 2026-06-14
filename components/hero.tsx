@@ -25,7 +25,7 @@ export function Hero() {
 
       <div className="container relative py-24 text-center lg:py-40">
         <Badge
-          className="mb-10 bg-foreground/10 px-4 py-4 text-sm backdrop-blur-sm"
+          className="mb-10 bg-foreground/10 backdrop-blur-sm"
           variant="outline"
         >
           <IconMapPinFilled className="mr-1" />
