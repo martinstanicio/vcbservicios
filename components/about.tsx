@@ -1,5 +1,6 @@
 import { IconEye, IconHeart, IconTarget } from "@tabler/icons-react";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const values = [
@@ -11,9 +12,11 @@ const values = [
   "Mejora continua",
 ];
 
-export function About() {
+type Props = React.ComponentProps<"section">;
+
+export function About({ className, ...props }: Props) {
   return (
-    <section className="py-20" id="sobre-nosotros">
+    <section className={cn("py-20", className)} id="sobre-nosotros" {...props}>
       <div className="container sm:px-6 lg:px-8 xl:max-w-7xl">
         <div className="text-center">
           <h2 className="font-bold text-4xl text-foreground tracking-tight sm:text-5xl">

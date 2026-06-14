@@ -9,12 +9,21 @@ import { phone } from "@/app/contact";
 import { siteName, title } from "@/app/metadata";
 import heroImage from "@/assets/hero.jpg";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { getWhatsAppURL } from "@/lib/whatsapp";
 import { Badge } from "./ui/badge";
 
-export function Hero() {
+type Props = React.ComponentProps<"section">;
+
+export function Hero({ className, ...props }: Props) {
   return (
-    <section className="dark relative flex min-h-[90vh] items-center justify-center bg-background">
+    <section
+      className={cn(
+        "dark relative flex min-h-[90vh] items-center justify-center bg-background",
+        className,
+      )}
+      {...props}
+    >
       <Image
         alt=""
         className="object-cover object-center"
